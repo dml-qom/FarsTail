@@ -7,7 +7,7 @@
 [![PyPI - Downloads](https://img.shields.io/pypi/dm/farstail?color=Purple)](https://pypi.org/project/farstail/)
 [![PyPI - License](https://img.shields.io/pypi/l/farstail)](https://pypi.org/project/farstail/)
 
-![alt-text](./images1.png)
+![alt-text](./farstail.png)
 ## Persian Natural Language Inference
 Natural Language Inference (NLI) who is also called [Texual Entailment](https://en.wikipedia.org/wiki/Textual_entailment) is an important task in NLP that its goal is to determine the inference relationship between a premise p and a hypothesis h. It is a three-class problem, where each pair (p, h) is assigned to one of these classes: "ENTAILMENT" if the hypothesis can be inferred from the premise, "CONTRADICTION" if the hypothesis contradicts with the premise, and "NEUTRAL" if infering hypothesis from premise is not possible.
 <br>In English, large datasets such as [SNLI](https://www.aclweb.org/anthology/D15-1075/), [MNLI](https://www.aclweb.org/anthology/N18-1101/), [SciTail](https://www.aaai.org/ocs/index.php/AAAI/AAAI18/paper/viewFile/17368/16067) are created for this task. Even for some other languages, datasets has been created that has improved this task in these languages. But we see this less for poor source languages like persian.
