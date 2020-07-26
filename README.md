@@ -16,7 +16,7 @@ Natural Language Inference (NLI) who is also called [Texual Entailment](https://
 <br>
 <table class="tg">
   <tr>
-    <td class="tg-lboi" colspan="1" rowspan="2" align="center"><b>premise</b></td>
+    <td class="tg-lboi" colspan="2" rowspan="2" align="center"><b>premise</b></td>
     <td class="tg-lboi" align="right" dir="rtl">مجمع عمومی سازمان ملل متحد رسماً آنتونیو گوترش را بعنوان دبیرکل بعدي سازمان ملل متحد و جانشین بان کی مون انتخاب کرد.</td>
   </tr>
   <tr>
