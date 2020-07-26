@@ -12,7 +12,7 @@
 Natural Language Inference (NLI) who is also called [Texual Entailment](https://en.wikipedia.org/wiki/Textual_entailment) is an important task in NLP that its goal is to determine the inference relationship between a premise p and a hypothesis h. It is a three-class problem, where each pair (p, h) is assigned to one of these classes: "ENTAILMENT" if the hypothesis can be inferred from the premise, "CONTRADICTION" if the hypothesis contradicts with the premise, and "NEUTRAL" if infering hypothesis from premise is not possible.
 <br>In English, large datasets such as [SNLI](https://www.aclweb.org/anthology/D15-1075/), [MNLI](https://www.aclweb.org/anthology/N18-1101/), [SciTail](https://www.aaai.org/ocs/index.php/AAAI/AAAI18/paper/viewFile/17368/16067) are created for this task. Even for some other languages, datasets has been created that has improved this task in these languages. But we see this less for poor source languages like persian.
 <br>Persian (Farsi) language is a [pluricentric language](https://en.wikipedia.org/wiki/Pluricentric_language) spoken by around 110 million people in countries such as Iran, Afghanistan, and Tajikistan. In this github, we present the first large scale Persian corpus for NLI task, called [FarsTail](https://arxiv.org/).
-
+<br>
 <table class="tg">
   <tr>
     <td class="tg-lboi" colspan="2" rowspan="2">premise</td>
@@ -38,7 +38,7 @@ Natural Language Inference (NLI) who is also called [Texual Entailment](https://
   </tr>
   <tr>
     <td class="tg-0pky" rowspan="2">neutral</td>
-    <td class="tg-0pky">عضاي سازمان ملل متحد به اتفاق آرا آنتونیو گوترش را بعنوان نامزد دبیر کلی سازمان ملل متحد معرفی کردند.</td>
+    <td class="tg-0pky">اعضاي سازمان ملل متحد به اتفاق آرا آنتونیو گوترش را بعنوان نامزد دبیر کلی سازمان ملل متحد معرفی کردند.</td>
   </tr>
   <tr>
     <td class="tg-0pky">The United Nations members unanimously nominated António Guterres as UN Secretary-General.</td>
