@@ -25,21 +25,21 @@ Natural Language Inference (NLI) who is also called [Texual Entailment](https://
   <tr>
     <td class="tg-lboi" rowspan="6">hypothesis</td>
     <td class="tg-lboi" rowspan="2">entailment</td>
-    <td class="tg-lboi">دبیر کل سازمان ملل متحد قبل از آنتونیو گوترش، بان کی مون بود.</td>
+    <td class="tg-lboi" align="right">دبیر کل سازمان ملل متحد قبل از آنتونیو گوترش، بان کی مون بود.</td>
   </tr>
   <tr>
     <td class="tg-lboi">Ban Ki-moon was the Secretary-General of the United Nations before António Guterres.</td>
   </tr>
   <tr>
     <td class="tg-0pky" rowspan="2">contradiction</td>
-    <td class="tg-0pky">کوفی عنان پیش از آنتونیو گوترش بعنوان دبیر کل سازمان ملل متحد انتخاب شده بود.</td>
+    <td class="tg-0pky" align="right">کوفی عنان پیش از آنتونیو گوترش بعنوان دبیر کل سازمان ملل متحد انتخاب شده بود.</td>
   </tr>
   <tr>
     <td class="tg-0pky">Before António Guterres, Kofi Annan had been selected as the United Nations Secretary-General.</td>
   </tr>
   <tr>
     <td class="tg-0pky" rowspan="2">neutral</td>
-    <td class="tg-0pky">اعضاي سازمان ملل متحد به اتفاق آرا آنتونیو گوترش را بعنوان نامزد دبیر کلی سازمان ملل متحد معرفی کردند.</td>
+    <td class="tg-0pky" align="right">اعضاي سازمان ملل متحد به اتفاق آرا آنتونیو گوترش را بعنوان نامزد دبیر کلی سازمان ملل متحد معرفی کردند.</td>
   </tr>
   <tr>
     <td class="tg-0pky">The United Nations members unanimously nominated António Guterres as UN Secretary-General.</td>
