@@ -17,7 +17,7 @@ Natural Language Inference (NLI) who is also called [Texual Entailment](https://
 <table class="tg">
   <tr>
     <td class="tg-lboi" colspan="2" rowspan="2">premise</td>
-    <td class="tg-lboi" align="right">مجمع عمومی سازمان ملل متحد رسماً آنتونیو گوترش را بعنوان دبیرکل بعدي سازمان ملل متحد و جانشین بان کی مون انتخاب کرد.</td>
+    <td class="tg-lboi" align="right" dir="rtl">مجمع عمومی سازمان ملل متحد رسماً آنتونیو گوترش را بعنوان دبیرکل بعدي سازمان ملل متحد و جانشین بان کی مون انتخاب کرد.</td>
   </tr>
   <tr>
     <td class="tg-lboi">The United Nations General Assembly formally elected António Guterres as the next UN Secretary-General and Ban Kimoon's successor.</td>
@@ -25,21 +25,21 @@ Natural Language Inference (NLI) who is also called [Texual Entailment](https://
   <tr>
     <td class="tg-lboi" rowspan="6">hypothesis</td>
     <td class="tg-lboi" rowspan="2">entailment</td>
-    <td class="tg-lboi" align="right">دبیر کل سازمان ملل متحد قبل از آنتونیو گوترش، بان کی مون بود.</td>
+    <td class="tg-lboi" align="right" dir="rtl">دبیر کل سازمان ملل متحد قبل از آنتونیو گوترش، بان کی مون بود.</td>
   </tr>
   <tr>
     <td class="tg-lboi">Ban Ki-moon was the Secretary-General of the United Nations before António Guterres.</td>
   </tr>
   <tr>
     <td class="tg-0pky" rowspan="2">contradiction</td>
-    <td class="tg-0pky" align="right">کوفی عنان پیش از آنتونیو گوترش بعنوان دبیر کل سازمان ملل متحد انتخاب شده بود.</td>
+    <td class="tg-0pky" align="right" dir="rtl">کوفی عنان پیش از آنتونیو گوترش بعنوان دبیر کل سازمان ملل متحد انتخاب شده بود.</td>
   </tr>
   <tr>
     <td class="tg-0pky">Before António Guterres, Kofi Annan had been selected as the United Nations Secretary-General.</td>
   </tr>
   <tr>
     <td class="tg-0pky" rowspan="2">neutral</td>
-    <td class="tg-0pky" align="right">اعضاي سازمان ملل متحد به اتفاق آرا آنتونیو گوترش را بعنوان نامزد دبیر کلی سازمان ملل متحد معرفی کردند.</td>
+    <td class="tg-0pky" align="right" dir="rtl">اعضاي سازمان ملل متحد به اتفاق آرا آنتونیو گوترش را بعنوان نامزد دبیر کلی سازمان ملل متحد معرفی کردند.</td>
   </tr>
   <tr>
     <td class="tg-0pky">The United Nations members unanimously nominated António Guterres as UN Secretary-General.</td>
