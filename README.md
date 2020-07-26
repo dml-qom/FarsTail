@@ -13,6 +13,7 @@ Natural Language Inference (NLI) who is also called [Texual Entailment](https://
 <br>In English, large datasets such as [SNLI](https://www.aclweb.org/anthology/D15-1075/), [MNLI](https://www.aclweb.org/anthology/N18-1101/), [SciTail](https://www.aaai.org/ocs/index.php/AAAI/AAAI18/paper/viewFile/17368/16067) are created for this task. Even for some other languages, datasets has been created that has improved this task in these languages. But we see this less for poor source languages like persian.
 <br>Persian (Farsi) language is a [pluricentric language](https://en.wikipedia.org/wiki/Pluricentric_language) spoken by around 110 million people in countries such as Iran, Afghanistan, and Tajikistan. In this github, we present the first large scale Persian corpus for NLI task, called [FarsTail](https://arxiv.org/).
 <br>
+<br>
 <table class="tg">
   <tr>
     <td class="tg-lboi" colspan="2" rowspan="2">premise</td>
