@@ -9,36 +9,36 @@
 
 ![alt-text](./farstail.png)
 ## Persian Natural Language Inference
-Natural Language Inference (NLI) who is also called [Texual Entailment](https://en.wikipedia.org/wiki/Textual_entailment) is an important task in NLP that its goal is to determine the inference relationship between a premise p and a hypothesis h. It is a three-class problem, where each pair (p, h) is assigned to one of these classes: "ENTAILMENT" if the hypothesis can be inferred from the premise, "CONTRADICTION" if the hypothesis contradicts with the premise, and "NEUTRAL" if infering hypothesis from premise is not possible.
+Natural Language Inference (NLI) who is also called [Textual Entailment](https://en.wikipedia.org/wiki/Textual_entailment) is an important task in NLP that its goal is to determine the inference relationship between a premise p and a hypothesis h. It is a three-class problem, where each pair (p, h) is assigned to one of these classes: "ENTAILMENT" if the hypothesis can be inferred from the premise, "CONTRADICTION" if the hypothesis contradicts with the premise, and "NEUTRAL" if infering hypothesis from premise is not possible.
 <br>In English, large datasets such as [SNLI](https://www.aclweb.org/anthology/D15-1075/), [MNLI](https://www.aclweb.org/anthology/N18-1101/), [SciTail](https://www.aaai.org/ocs/index.php/AAAI/AAAI18/paper/viewFile/17368/16067) are created for this task. Even for some other languages, datasets has been created that has improved this task in these languages. But we see this less for poor source languages like persian.
 <br>Persian (Farsi) language is a [pluricentric language](https://en.wikipedia.org/wiki/Pluricentric_language) spoken by around 110 million people in countries such as Iran, Afghanistan, and Tajikistan. In this github, we present the first large scale Persian corpus for NLI task, called [FarsTail](https://arxiv.org/).
 <br>
 <br>
 <table class="tg">
   <tr>
-    <td class="tg-lboi" colspan="2" rowspan="2" align="center"><b>premise</b></td>
+    <td class="tg-lboi" colspan="2" rowspan="2" align="center"><b>Premise</b></td>
     <td class="tg-lboi" align="right" dir="rtl"><b>مجمع عمومی سازمان ملل متحد رسماً آنتونیو گوترش را بعنوان دبیرکل بعدي سازمان ملل متحد و جانشین بان کی مون انتخاب کرد.</b></td>
   </tr>
   <tr>
     <td class="tg-lboi"><b>The United Nations General Assembly formally elected António Guterres as the next UN Secretary-General and Ban Kimoon's successor.</b></td>
   </tr>
   <tr>
-    <td class="tg-lboi" rowspan="6" align="center"><b>hypothesis</b></td>
-    <td class="tg-lboi" rowspan="2" align="center"><b>entailment</b></td>
+    <td class="tg-lboi" rowspan="6" align="center"><b>Hypothesis</b></td>
+    <td class="tg-lboi" rowspan="2" align="center"><b>Entailment</b></td>
     <td class="tg-lboi" align="right" dir="rtl">دبیر کل سازمان ملل متحد قبل از آنتونیو گوترش، بان کی مون بود.</td>
   </tr>
   <tr>
     <td class="tg-lboi">Ban Ki-moon was the Secretary-General of the United Nations before António Guterres.</td>
   </tr>
   <tr>
-    <td class="tg-0pky" rowspan="2" align="center"><b>contradiction</b></td>
+    <td class="tg-0pky" rowspan="2" align="center"><b>Contradiction</b></td>
     <td class="tg-0pky" align="right" dir="rtl">کوفی عنان پیش از آنتونیو گوترش بعنوان دبیر کل سازمان ملل متحد انتخاب شده بود.</td>
   </tr>
   <tr>
     <td class="tg-0pky">Before António Guterres, Kofi Annan had been selected as the United Nations Secretary-General.</td>
   </tr>
   <tr>
-    <td class="tg-0pky" rowspan="2" align="center"><b>neutral</b></td>
+    <td class="tg-0pky" rowspan="2" align="center"><b>Neutral</b></td>
     <td class="tg-0pky" align="right" dir="rtl">اعضاي سازمان ملل متحد به اتفاق آرا آنتونیو گوترش را بعنوان نامزد دبیر کلی سازمان ملل متحد معرفی کردند.</td>
   </tr>
   <tr>
@@ -46,13 +46,14 @@ Natural Language Inference (NLI) who is also called [Texual Entailment](https://
   </tr>
 </table>
 
-We divided the data into test, train, and dev based on the following distribution:
+We divided the data into train, dev, and test sets based on the following distribution:
 
-| Split |     Number   |
-|-------|--------------|
-| Train |     7266     |
-| Dev   |     1537     |
-| Test  |     1564     |
+| Sets | Entailment | Contradiction | Neutral | **Sum** |
+| :---: | :---: | :---: | :---: | :---: |
+| Train | 2429 | 2389 | 2448 | **7266** |
+| Dev | 515 | 499 | 523 | **1537** |
+| Test | 519 | 510 | 535 | **1564** |
+| **Total** | **3463** | **3398** | **3506** | **10367** |
 
 ## Folder Structure
 
@@ -104,13 +105,13 @@ farstail_word_index = farstail.get_word_index()
 ```
 
 ## results
-|Model | Word2vec | fastText | BERT |
+| Model | Word2vec | fastText | BERT |
 | --- | --- | --- | --- |
-|**ESIM** | 81.1 | 86.3 | 92.4 |
-|**HPMP** | 79.4 | 83.1 | **93.7** |
-|**ULMFIT** | 81.5 | 86.4 | 92.7 |
-|**DecompAtt** | 81.5 | 86.4 | 92.7 |
-|**X-Ling transfer learning** | 81.5 | 86.4 | 92.7 |
+| **ESIM** | 81.1 | 86.3 | 92.4 |
+| **HPMP** | 79.4 | 83.1 | **93.7** |
+| **ULMFIT** | 81.5 | 86.4 | 92.7 |
+| **DecompAtt** | 81.5 | 86.4 | 92.7 |
+| **X-Ling transfer learning** | 81.5 | 86.4 | 92.7 |
 
 
 ## License
