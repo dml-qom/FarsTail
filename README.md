@@ -60,13 +60,14 @@ train_ind, val_ind, test_ind, dictionary = farstail.load_indexed_data()
 
 ## results
 |Model | Word2vec | fastText | ELMo | BERT |
-| --- | --- | --- | --- | --- |
+||
 |**DecompAtt** | **0.6566** | 0.5831 | 0.5505 | 0.5722 |
 |**ESIM** | 0.7110 | **0.7136** | 0.6873 | **0.7136** |
 |**HBMP** | **0.6604** | 0.6521 | 0.6349 | 0.6432 |
 |**Translate-Source** | 0.7653 | **0.7813** | ------ | 0.7519 |
 |**Translate-Target** | 0.6822 | **0.7046** | ------ | 0.6899 |
 <br>
+
 | Model | Test Accuracy |
 | --- | --- |
 |**ULMFiT** | **0.7244** |
