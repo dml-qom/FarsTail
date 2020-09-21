@@ -56,6 +56,7 @@ train_data, val_data, test_data = farstail.load_original_data()
 ```python
 from farstail.datasets import farstail
 train_ind, val_ind, test_ind, dictionary = farstail.load_indexed_data()
+```
 
 ## results
 |Model | Word2vec | fastText | ELMo | BERT |
