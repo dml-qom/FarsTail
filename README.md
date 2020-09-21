@@ -29,7 +29,7 @@ We divided the data into test, train, and dev based on the following distributio
 .
 ├──  data
 │        ├── Indexed-FarsTail.npz
-         ├── Train-word.csv
+│        ├── Train-word.csv
 │        ├── Val-word.csv
 │        └── Test-word.csv
 ├── farstail_image.png
