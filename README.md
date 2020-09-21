@@ -14,37 +14,6 @@ Natural Language Inference (NLI) who is also called [Texual Entailment](https://
 <br>Persian (Farsi) language is a [pluricentric language](https://en.wikipedia.org/wiki/Pluricentric_language) spoken by around 110 million people in countries such as Iran, Afghanistan, and Tajikistan. In this github, we present the first large scale Persian corpus for NLI task, called [FarsTail](https://arxiv.org/).
 <br>
 <br>
-<table class="tg">
-  <tr>
-    <td class="tg-lboi" colspan="2" rowspan="2" align="center"><b>premise</b></td>
-    <td class="tg-lboi" align="right" dir="rtl"><b>مجمع عمومی سازمان ملل متحد رسماً آنتونیو گوترش را بعنوان دبیرکل بعدي سازمان ملل متحد و جانشین بان کی مون انتخاب کرد.</b></td>
-  </tr>
-  <tr>
-    <td class="tg-lboi"><b>The United Nations General Assembly formally elected António Guterres as the next UN Secretary-General and Ban Kimoon's successor.</b></td>
-  </tr>
-  <tr>
-    <td class="tg-lboi" rowspan="6" align="center"><b>hypothesis</b></td>
-    <td class="tg-lboi" rowspan="2" align="center"><b>entailment</b></td>
-    <td class="tg-lboi" align="right" dir="rtl">دبیر کل سازمان ملل متحد قبل از آنتونیو گوترش، بان کی مون بود.</td>
-  </tr>
-  <tr>
-    <td class="tg-lboi">Ban Ki-moon was the Secretary-General of the United Nations before António Guterres.</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky" rowspan="2" align="center"><b>contradiction</b></td>
-    <td class="tg-0pky" align="right" dir="rtl">کوفی عنان پیش از آنتونیو گوترش بعنوان دبیر کل سازمان ملل متحد انتخاب شده بود.</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">Before António Guterres, Kofi Annan had been selected as the United Nations Secretary-General.</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky" rowspan="2" align="center"><b>neutral</b></td>
-    <td class="tg-0pky" align="right" dir="rtl">اعضاي سازمان ملل متحد به اتفاق آرا آنتونیو گوترش را بعنوان نامزد دبیر کلی سازمان ملل متحد معرفی کردند.</td>
-  </tr>
-  <tr>
-    <td class="tg-0pky">The United Nations members unanimously nominated António Guterres as UN Secretary-General.</td>
-  </tr>
-</table>
 
 We divided the data into test, train, and dev based on the following distribution:
 
@@ -59,25 +28,10 @@ We divided the data into test, train, and dev based on the following distributio
 ```bash
 .
 ├──  data
-│        ├── train.csv
-│        ├── devc.csv
-│        └── test.csv
-├──  models
-│        ├── ESIM
-│        │      ├── model.h5
-│        │      └── code.ipynb
-│        ├── HBMP
-│        │      ├── model.h5
-│        │      └── code.ipynb
-│        ├── ULMFit
-│        │      ├── model.h5
-│        │      └── code.ipynb
-│        ├── DecompAtt
-│        │      ├── model.h5
-│        │      └── code.ipynb
-│        └── cross-lingual transfer learning
-│               ├── model.h5
-│               └── code.ipynb
+│        ├── Indexed-FarsTail.npz
+         ├── Train-word.csv
+│        ├── Val-word.csv
+│        └── Test-word.csv
 ├── farstail_image.png
 ├── LICENSE
 └── README.md
@@ -91,43 +45,44 @@ We have provided an API in the form of a python package to read and use FarsTail
 pip install farstail
 ```
 ### using
-* Loading the the FarsTail dataset.
+* Loading the the original FarsTail dataset.
 ```python
 from farstail.datasets import farstail
-(p_train, h_train, l_train), (p_dev, h_dev, l_dev), (p_test, h_test, l_test) = farstail.load_data()
+train_data, val_data, test_data = farstail.load_original_data()
 ```
 
-* Retrieving a dict mapping words to their index in the IMDB dataset.
+
+* Loading the the indexed FarsTail dataset.
 ```python
-from farsfail.datasets import farstail
-farstail_word_index = farstail.get_word_index()
-```
+from farstail.datasets import farstail
+train_ind, val_ind, test_ind, dictionary = farstail.load_indexed_data()
 
 ## results
-|Model | Word2vec | fastText | BERT |
+|Model | Word2vec | fastText | ELMo | BERT |
 | --- | --- | --- | --- |
-|**ESIM** | 81.1 | 86.3 | 92.4 |
-|**HPMP** | 79.4 | 83.1 | **93.7** |
-|**ULMFIT** | 81.5 | 86.4 | 92.7 |
-|**DecompAtt** | 81.5 | 86.4 | 92.7 |
-|**X-Ling transfer learning** | 81.5 | 86.4 | 92.7 |
+|**DecompAtt** | **0.6566** | 0.5831 | 0.5505 | 0.5722 |
+|**ESIM** | 0.7110 | **0.7136** | 0.6873 | **0.7136** |
+|**HBMP** | **0.6604** | 0.6521 | 0.6349 | 0.6432 |
+|**Translate-Source** | 0.7653 | **0.7813** | 0.7519 | ------ |
+|**Translate-Target** | 0.6822 | **0.7046** | 0.6899 | ------ |
 
+|**ULMFiT** | **0.7244** |
+|**ESIM-BERT-XLing** | **0.7462** |
 
 ## License
-The content of this project is licensed under the AAA license.
+The content of this project is licensed under the MIT license.
 
 ## References
 
 Please cite our paper if you find this dataset, article or package useful.
 
-[1] authors. 2020. [FarsTail: A Persian Natural Language Inference Dataset](https://arxiv.org/). dml-qom. 25 (4), 467-482.
+[1] Hossein Amirkhani, Mohammad Azari Jafari, Azadeh Amirak, Zohreh Pourjafari, Soroush Faridan Jahromi and Zeinab Kouhkan, [FarsTail: A Persian Natural Language Inference Dataset](https://arxiv.org/abs/2009.08820), arxiv, 2020.
 
 ```bibtex
-@Article{dml-qom2020,
-  author        = {dml-qom},
-  title         = {FarsTail: A Persian Natural Language Inference Dataset},
-  journal       = {arxiv.org},
-  year          = {2020},
-  month         = {oct}
+@inproceedings{Amirkhani2020FarsTail,
+  title={FarsTail: A Persian Natural Language Inference Dataset},
+  author={Hossein Amirkhani and Mohammad Azari Jafari and Azadeh Amirak and Zohreh Pourjafari and Soroush Faridan Jahromi and Zeinab Kouhkan},
+  journal={arXiv preprint arXiv:2009.08820},
+  year={2020}
 }
 ```
