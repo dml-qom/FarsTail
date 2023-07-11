@@ -1,4 +1,4 @@
-## FarsTail: A Persian Natural Language Inference Dataset
+## FarsTail: a Persian natural language inference dataset
 
 
 ![alt-text](./farstail.png)
