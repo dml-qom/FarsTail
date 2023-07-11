@@ -36,12 +36,17 @@ Here is test accuracies obtained by training some models on FarsTail training se
 
 
 ## Reference
+If you use this dataset, please cite the following paper:
+
+Hossein Amirkhani, Mohammad AzariJafari, Soroush Faridan-Jahromi, Zeinab Kouhkan, Zohreh Pourjafari, Azadeh Amirak (2023). [FarsTail: A Persian Natural Language Inference Dataset](https://doi.org/10.1007/s00500-023-08959-3). *Soft Computing*.
 
 ```bibtex
-@article{amirkhani2020farstail,
-  title={FarsTail: A Persian Natural Language Inference Dataset},
-  author={Hossein Amirkhani, Mohammad Azari Jafari, Azadeh Amirak, Zohreh Pourjafari, Soroush Faridan Jahromi, and Zeinab Kouhkan},
-  journal={arXiv preprint arXiv:2009.08820},
-  year={2020}
+@article{amirkhani2023farstail,
+  title={Farstail: A persian natural language inference dataset},
+  author={Amirkhani, Hossein and AzariJafari, Mohammad and Faridan-Jahromi, Soroush and Kouhkan, Zeinab and Pourjafari, Zohreh and Amirak, Azadeh},
+  journal={Soft Computing},
+  year={2023},
+  publisher={Springer},
+  doi={10.1007/s00500-023-08959-3}
 }
 ```
