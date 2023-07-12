@@ -42,7 +42,7 @@ Hossein Amirkhani, Mohammad AzariJafari, Soroush Faridan-Jahromi, Zeinab Kouhkan
 
 ```bibtex
 @article{amirkhani2023farstail,
-  title={Farstail: A persian natural language inference dataset},
+  title={FarsTail: a Persian natural language inference dataset},
   author={Amirkhani, Hossein and AzariJafari, Mohammad and Faridan-Jahromi, Soroush and Kouhkan, Zeinab and Pourjafari, Zohreh and Amirak, Azadeh},
   journal={Soft Computing},
   year={2023},
